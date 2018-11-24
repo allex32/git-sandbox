@@ -1,6 +1,7 @@
 Работа с remote ветками:
-1) 
-
+1) git remote -v 
+origin  https://github.com/allex32/git-sandbox.git (fetch)
+origin  https://github.com/allex32/git-sandbox.git (push)
 
 -----------------------
 -----------------------
