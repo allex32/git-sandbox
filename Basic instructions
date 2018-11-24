@@ -1,0 +1,19 @@
+Работа с remote ветками:
+1) 
+
+
+-----------------------
+-----------------------
+
+Работа с ветками:
+1) Every branch can be local or remote
+2) If we want to push local branch we need to designate some remote branch
+
+
+
+Command:
+git branch *branch name*
+git checkout *branch name*
+-----------------------
+-----------------------
+
