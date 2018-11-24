@@ -1,0 +1,32 @@
+Работа с remote ветками:
+1) 
+git remote -v 
+origin  https://github.com/allex32/git-sandbox.git (fetch)
+origin  https://github.com/allex32/git-sandbox.git (push)
+
+git remote rm *remote-name* 
+example: 
+git remote rm *origin* 
+
+
+2) При включенной двухфакторной аутентификации необходимо:
+а) Сгенерировать токен на github 
+b) Добавить remote репозиторий, указав в url-е сгенерированный token
+
+"git remote add origin https://username:access-token@github.com/username/repo.git"
+https://stackoverflow.com/questions/17659206/git-push-results-in-authentication-failed#comment58098297_21027728
+-----------------------
+-----------------------
+
+Работа с ветками:
+1) Every branch can be local or remote
+2) If we want to push local branch we need to designate some remote branch
+
+
+
+Command:
+git branch *branch name*
+git checkout *branch name*
+-----------------------
+-----------------------
+
