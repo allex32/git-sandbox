@@ -1,7 +1,13 @@
 Работа с remote ветками:
-1) git remote -v 
+1) 
+git remote -v 
 origin  https://github.com/allex32/git-sandbox.git (fetch)
 origin  https://github.com/allex32/git-sandbox.git (push)
+
+git remote rm *remote-name* 
+example: 
+git remote rm *origin* 
+
 
 2) При включенной двухфакторной аутентификации необходимо:
 а) Сгенерировать токен на github 
