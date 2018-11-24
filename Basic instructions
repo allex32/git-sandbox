@@ -3,6 +3,12 @@
 origin  https://github.com/allex32/git-sandbox.git (fetch)
 origin  https://github.com/allex32/git-sandbox.git (push)
 
+2) При включенной двухфакторной аутентификации необходимо:
+а) Сгенерировать токен на github 
+b) Добавить remote репозиторий, указав в url-е сгенерированный token
+
+"git remote add origin https://username:access-token@github.com/username/repo.git"
+https://stackoverflow.com/questions/17659206/git-push-results-in-authentication-failed#comment58098297_21027728
 -----------------------
 -----------------------
 
