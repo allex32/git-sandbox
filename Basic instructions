@@ -11,13 +11,15 @@ https://stackoverflow.com/questions/17659206/git-push-results-in-authentication-
 -------------------------------------------------------------------------------------------------------------------
 git REMOTE 
 
+git remote add <remote_name> <remote_repo_url>
+
 git remote -v 
 origin  https://github.com/allex32/git-sandbox.git (fetch)
 origin  https://github.com/allex32/git-sandbox.git (push)
 
-git remote rm *remote-name* 
+git remote rm <remote_name> 
 example: 
-git remote rm *origin* 
+git remote rm origin
 
 
 -------------------------------------------------------------------------------------------------------------------
@@ -35,6 +37,13 @@ git log --oneline master..some-feature (--oneline) - все коммиты, ко
 -------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------
 
+git checkout
+2 режима (https://www.atlassian.com/git/tutorials/undoing-changes):
+1)git checkout *file* - HEAD указатель не изменяется. Изменяется только содержимое файла, т.е. мы можем 
+делать простой коммит этих изменений поверх HEAD
+
+2)git checkout *branch*
+HEAD переходит в deattached state
 
 Работа с ветками:
 1) Every branch can be local or remote
