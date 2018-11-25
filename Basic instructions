@@ -1,32 +1,77 @@
-Работа с remote ветками:
-1) 
-git remote -v 
-origin  https://github.com/allex32/git-sandbox.git (fetch)
-origin  https://github.com/allex32/git-sandbox.git (push)
+Two-factor authentication
 
-git remote rm *remote-name* 
-example: 
-git remote rm *origin* 
-
-
-2) При включенной двухфакторной аутентификации необходимо:
+При включенной двухфакторной аутентификации необходимо:
 а) Сгенерировать токен на github 
 b) Добавить remote репозиторий, указав в url-е сгенерированный token
 
 "git remote add origin https://username:access-token@github.com/username/repo.git"
 https://stackoverflow.com/questions/17659206/git-push-results-in-authentication-failed#comment58098297_21027728
------------------------
------------------------
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+git REMOTE 
+
+git remote add <remote_name> <remote_repo_url>
+
+git remote -v 
+origin  https://github.com/allex32/git-sandbox.git (fetch)
+origin  https://github.com/allex32/git-sandbox.git (push)
+
+git remote rm <remote_name> 
+example: 
+git remote rm origin
+
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+git LOG
+
+https://www.atlassian.com/git/tutorials/inspecting-a-repository
+git log --oneline - история коммитов в одну линию
+git log *some branch* - история коммитов для определенной ветки (remote и local)
+
+git log --graph --decorate --oneline  - коммиты в виде графовой структуры
+
+git log --oneline master..some-feature (--oneline) - все коммиты, которые есть в ветке some-feature, но отсутствуют в master
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+git CHECKOUT
+
+With the "git checkout" command, you determine which revision of your project you want to work on. 
+Git then places all of that revision's files in your working copy folder.
+
+
+2 режима (https://www.atlassian.com/git/tutorials/undoing-changes):
+1)git checkout *file* - HEAD указатель не изменяется. Изменяется только содержимое файла, т.е. мы можем 
+делать простой коммит этих изменений поверх HEAD
+(https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
+
+
+2)git checkout <commit>
+HEAD переходит в deattached state
+Мы можем сделать коммит, но он не будет прикреплен к веткам, а будет зафиксирован в истории коммитов 
+(см git reflog) и в качестве родителя содержать тот коммит, к которому мы зачекаутились.
+
+Нормальная практика: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
+git branch <new branch> <commit hash>
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
 
 Работа с ветками:
 1) Every branch can be local or remote
 2) If we want to push local branch we need to designate some remote branch
 
 
-
 Command:
 git branch *branch name*
 git checkout *branch name*
------------------------
------------------------
-
