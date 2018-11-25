@@ -51,7 +51,7 @@ Git then places all of that revision's files in your working copy folder.
 
 2)git checkout <commit>
 HEAD переходит в deattached state
-Мы можем сделать коммит, но он не будет прикреплен к веткам, а будет зафиксирован в истории коммитов 
+Мы можем сделать коммит, но он не будет прикреплен к веткам (т.н. orphaned commits), а будет зафиксирован в истории коммитов 
 (см git reflog) и в качестве родителя содержать тот коммит, к которому мы зачекаутились.
 
 Нормальная практика: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
