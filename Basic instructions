@@ -37,13 +37,35 @@ git log --oneline master..some-feature (--oneline) - все коммиты, ко
 -------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------
 
-git checkout
+git CHECKOUT
+
+With the "git checkout" command, you determine which revision of your project you want to work on. 
+Git then places all of that revision's files in your working copy folder.
+
+
 2 режима (https://www.atlassian.com/git/tutorials/undoing-changes):
 1)git checkout *file* - HEAD указатель не изменяется. Изменяется только содержимое файла, т.е. мы можем 
 делать простой коммит этих изменений поверх HEAD
+(https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit)
 
-2)git checkout *branch*
+
+2)git checkout <commit>
 HEAD переходит в deattached state
+Мы можем сделать коммит, но он не будет прикреплен к веткам, а будет зафиксирован в истории коммитов 
+(см git reflog) и в качестве родителя содержать тот коммит, к которому мы зачекаутились.
+
+Нормальная практика: https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
+git branch <new branch> <commit hash>
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
 
 Работа с ветками:
 1) Every branch can be local or remote
